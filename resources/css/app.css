@@ -1,11 +1,62 @@
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
+@import 'bootstrap/dist/css/bootstrap.min.css';
 
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+:root {
+    --org-purple: #4b0082;
+    --org-purple-dark: #34005c;
+    --org-gold: #f5c542;
+    --org-gold-dark: #d9a900;
+    --org-light: #faf7ff;
 }
+
+body {
+    background: var(--org-light);
+}
+
+.org-page-header {
+    background: linear-gradient(135deg, var(--org-purple), var(--org-purple-dark));
+    color: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px rgba(75, 0, 130, 0.25);
+}
+
+.org-card {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+.btn-org-primary {
+    background: var(--org-purple);
+    border-color: var(--org-purple);
+    color: white;
+}
+
+.btn-org-primary:hover {
+    background: var(--org-purple-dark);
+    border-color: var(--org-purple-dark);
+    color: white;
+}
+
+.btn-org-gold {
+    background: var(--org-gold);
+    border-color: var(--org-gold);
+    color: #241100;
+    font-weight: 600;
+}
+
+.btn-org-gold:hover {
+    background: var(--org-gold-dark);
+    border-color: var(--org-gold-dark);
+    color: #241100;
+}
+
+.badge-org {
+    background: var(--org-gold);
+    color: #241100;
+}
+
