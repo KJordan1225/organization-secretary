@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DuesPaymentController;
+use App\Http\Controllers\FinancialTransactionController;
 use App\Http\Controllers\MeetingController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\ProfileController;
@@ -36,6 +37,8 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('dues', DuesPaymentController::class)
         ->parameters(['dues' => 'due']);
+    Route::resource('finances', FinancialTransactionController::class)
+        ->parameters(['finances' => 'finance']);
 });
 
 require __DIR__.'/auth.php';
