@@ -38,4 +38,9 @@ class Member extends Model
             "{$this->first_name} {$this->middle_name} {$this->last_name} {$this->suffix}"
         );
     }
+
+    public function duesPayments()
+    {
+        return $this->hasMany(DuesPayment::class);
+    }
 }

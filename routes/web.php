@@ -1,9 +1,10 @@
 <?php
 
+use App\Http\Controllers\DuesPaymentController;
+use App\Http\Controllers\MeetingController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
-use App\Http\Controllers\MeetingController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -26,12 +27,15 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::resource('members', MemberController::class);
-    
+
     Route::resource('meetings', MeetingController::class);
     Route::get('/meetings/{meeting}/attendance', [MeetingController::class, 'editAttendance'])
         ->name('meetings.attendance.edit');
     Route::put('/meetings/{meeting}/attendance', [MeetingController::class, 'updateAttendance'])
         ->name('meetings.attendance.update');
+
+    Route::resource('dues', DuesPaymentController::class)
+        ->parameters(['dues' => 'due']);
 });
 
 require __DIR__.'/auth.php';
