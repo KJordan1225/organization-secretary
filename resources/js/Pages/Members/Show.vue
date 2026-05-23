@@ -1,5 +1,6 @@
 <script setup>
 import { Link, router } from '@inertiajs/vue3'
+import OrganizationSecretaryLayout from '@/Layouts/OrganizationSecretaryLayout.vue';
 
 const props = defineProps({
     member: Object,
@@ -13,6 +14,7 @@ function deleteMember() {
 </script>
 
 <template>
+    <OrganizationSecretaryLayout title="Member Profile">
     <div class="container py-4">
         <div class="org-page-header mb-4 d-flex justify-content-between align-items-center">
             <div>
@@ -89,4 +91,5 @@ function deleteMember() {
             </div>
         </div>
     </div>
+    </OrganizationSecretaryLayout>
 </template>
