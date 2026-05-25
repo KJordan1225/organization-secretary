@@ -1,5 +1,7 @@
 <script setup>
 import { Link, useForm } from '@inertiajs/vue3'
+import OrganizationSecretaryLayout from '@/Layouts/OrganizationSecretaryLayout.vue';
+
 
 const form = useForm({
     transaction_type: 'income',
@@ -21,7 +23,8 @@ function submit() {
 </script>
 
 <template>
-<div class="container py-4">
+    <OrganizationSecretaryLayout title="Add Transaction">
+    <div class="container py-4">
 
     <div class="org-page-header mb-4">
         <h1 class="mb-1">Add Transaction</h1>
@@ -171,4 +174,5 @@ function submit() {
     </div>
 
 </div>
+    </OrganizationSecretaryLayout>
 </template>

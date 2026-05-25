@@ -1,6 +1,7 @@
 <script setup>
 import { Link, router, usePage } from '@inertiajs/vue3'
 import { ref } from 'vue'
+import OrganizationSecretaryLayout from '@/Layouts/OrganizationSecretaryLayout.vue';
 
 const props = defineProps({
     duesPayments: Object,
@@ -35,6 +36,7 @@ function money(value) {
 </script>
 
 <template>
+    <OrganizationSecretaryLayout title="Dues">
     <div class="container py-4">
         <div class="org-page-header mb-4 d-flex justify-content-between align-items-center">
             <div>
@@ -188,4 +190,5 @@ function money(value) {
             </div>
         </div>
     </div>
+    </OrganizationSecretaryLayout>
 </template>

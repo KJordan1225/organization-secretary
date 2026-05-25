@@ -1,5 +1,7 @@
 <script setup>
 import { Link, useForm } from '@inertiajs/vue3'
+import OrganizationSecretaryLayout from '@/Layouts/OrganizationSecretaryLayout.vue';
+
 
 const props = defineProps({
     finance: Object,
@@ -25,11 +27,11 @@ function submit() {
 </script>
 
 <template>
-<div class="container py-4">
-
-    <div class="org-page-header mb-4">
-        <h1 class="mb-1">Edit Transaction</h1>
-    </div>
+    <OrganizationSecretaryLayout title="Edit Transaction">
+        <div class="container py-4">
+            <div class="org-page-header mb-4">
+                <h1 class="mb-1">Edit Transaction</h1>
+            </div>
 
     <div class="card org-card">
         <div class="card-body">
@@ -56,4 +58,5 @@ function submit() {
     </div>
 
 </div>
+    </OrganizationSecretaryLayout>
 </template>

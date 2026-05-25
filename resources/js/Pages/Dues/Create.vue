@@ -1,5 +1,7 @@
 <script setup>
-import { Link, useForm } from '@inertiajs/vue3'
+import { Link, useForm } from '@inertiajs/vue3'\
+import OrganizationSecretaryLayout from '@/Layouts/OrganizationSecretaryLayout.vue';
+
 
 defineProps({
     members: Array,
@@ -22,6 +24,7 @@ function submit() {
 </script>
 
 <template>
+    <OrganizationSecretaryLayout title="Add Dues Record">
     <div class="container py-4">
         <div class="org-page-header mb-4">
             <h1 class="mb-1">Add Dues Record</h1>
@@ -102,4 +105,5 @@ function submit() {
             </div>
         </div>
     </div>
+    </OrganizationSecretaryLayout>
 </template>

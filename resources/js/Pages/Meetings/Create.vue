@@ -1,5 +1,7 @@
 <script setup>
 import { Link, useForm } from '@inertiajs/vue3'
+import OrganizationSecretaryLayout from '@/Layouts/OrganizationSecretaryLayout.vue';
+
 
 const form = useForm({
     title: '',
@@ -15,6 +17,7 @@ function submit() {
 </script>
 
 <template>
+    <OrganizationSecretaryLayout title="Add Meeting">
     <div class="container py-4">
         <div class="org-page-header mb-4">
             <h1 class="mb-1">Add Meeting</h1>
@@ -66,4 +69,5 @@ function submit() {
             </div>
         </div>
     </div>
+    </OrganizationSecretaryLayout>
 </template>

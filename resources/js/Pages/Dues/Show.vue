@@ -1,5 +1,7 @@
 <script setup>
 import { Link, router } from '@inertiajs/vue3'
+import OrganizationSecretaryLayout from '@/Layouts/OrganizationSecretaryLayout.vue';
+
 
 const props = defineProps({
     due: Object,
@@ -18,6 +20,7 @@ function deleteDue() {
 </script>
 
 <template>
+    <OrganizationSecretaryLayout title="View Dues Record">
     <div class="container py-4">
         <div class="org-page-header mb-4 d-flex justify-content-between align-items-center">
             <div>
@@ -81,4 +84,5 @@ function deleteDue() {
             </div>
         </div>
     </div>
+    </OrganizationSecretaryLayout>
 </template>

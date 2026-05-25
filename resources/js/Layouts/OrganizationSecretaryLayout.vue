@@ -11,15 +11,15 @@
             <Link href="/members">Members</Link>
             <Link href="/finances">Finances</Link>
             <Link href="/meetings">Meetings</Link>
-            <Link href="/minutes">Meeting Minutes</Link>
-            <Link href="/events">Events</Link>
+            <Link href="/dues">Dues</Link>
+            <!-- <Link href="/events">Events</Link>
             <Link href="/attendance">Attendance</Link>
             <Link href="/announcements">Announcements</Link>
             <Link href="/documents">Documents</Link>
             <Link href="/tasks">Tasks</Link>
-            <Link href="/reports">Reports</Link>
+            <Link href="/reports">Reports</Link> 
             <Link href="/organization-settings">Organization Settings</Link>
-            <Link href="/profile">Profile</Link>
+            <Link href="/profile">Profile</Link> -->
         </aside>
 
         <main class="org-main">

@@ -1,5 +1,7 @@
 <script setup>
 import { Link, router } from '@inertiajs/vue3'
+import OrganizationSecretaryLayout from '@/Layouts/OrganizationSecretaryLayout.vue';
+
 
 const props = defineProps({
     finance: Object,
@@ -17,6 +19,7 @@ function deleteTransaction() {
 </script>
 
 <template>
+    <OrganizationSecretaryLayout title="View Transaction">
 <div class="container py-4">
 
     <div class="org-page-header mb-4 d-flex justify-content-between align-items-center">
@@ -149,4 +152,5 @@ function deleteTransaction() {
     </div>
 
 </div>
+    </OrganizationSecretaryLayout>
 </template>

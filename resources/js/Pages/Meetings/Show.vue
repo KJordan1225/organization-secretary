@@ -1,5 +1,7 @@
 <script setup>
 import { Link, router } from '@inertiajs/vue3'
+import OrganizationSecretaryLayout from '@/Layouts/OrganizationSecretaryLayout.vue';
+
 
 const props = defineProps({
     meeting: Object,
@@ -13,6 +15,7 @@ function deleteMeeting() {
 </script>
 
 <template>
+    <OrganizationSecretaryLayout :title="meeting.title">
     <div class="container py-4">
         <div class="org-page-header mb-4 d-flex justify-content-between align-items-center">
             <div>
@@ -87,4 +90,5 @@ function deleteMeeting() {
             </div>
         </div>
     </div>
+    </OrganizationSecretaryLayout>
 </template>
